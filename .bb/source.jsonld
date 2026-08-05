@@ -1,0 +1,51 @@
+{
+  "@context": "../../context/source.context.jsonld",
+  "@type": "dcat:Dataset",
+  "@id": "https://biobricks.ai/bricks/tsar",
+  "dcterms:title": "TSAR - Tracking System for Alternative methods towards Regulatory acceptance",
+  "dcterms:description": "A BioBricks brick named 'tsar' identifying it with the TSAR (Tracking System for Alternative methods towards Regulatory acceptance) database of the European Commission Joint Research Centre (JRC). Per the brick README the source is https://tsar.jrc.ec.europa.eu/. TSAR tracks the development, validation and regulatory acceptance status of alternative (non-animal) test methods. The on-disk brick contains only a README and an MIT LICENSE for the brick tooling (not the data), so the packaged data files cannot be confirmed from the repository; the sibling brick tsar-jrc-toxicity-data downloads the TSAR CSV export.",
+  "dcterms:license": "https://creativecommons.org/licenses/by/4.0/",
+  "dcterms:creator": "European Commission, Joint Research Centre (JRC)",
+  "dcterms:publisher": "European Commission, Joint Research Centre (JRC)",
+  "dcterms:identifier": "https://tsar.jrc.ec.europa.eu/",
+  "biobricks:licenseName": "CC BY 4.0 (European Commission reuse policy, Decision 2011/833/EU)",
+  "biobricks:licenseClass": "attribution",
+  "biobricks:merckCommercialUse": "permitted",
+  "biobricks:licenseEvidence": [
+    {
+      "source": "/mnt/raid2/biobricks/tsar/README.md",
+      "quote": "# tsar - Tracking System for Alternative methods towards Regulatory acceptance\nsource: https://tsar.jrc.ec.europa.eu/",
+      "confidence": "high"
+    },
+    {
+      "source": "https://commission.europa.eu/legal-notice_en",
+      "quote": "Content owned by the EU is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) licence, meaning reuse is permitted when 'appropriate credit is given and changes are indicated.' (Commission Decision of 12 December 2011 on the reuse of Commission documents, 2011/833/EU)",
+      "confidence": "medium"
+    },
+    {
+      "source": "https://tsar.jrc.ec.europa.eu/ (footer)",
+      "quote": "This site is managed by the Joint Research Centre",
+      "confidence": "medium"
+    }
+  ],
+  "biobricks:reviewed": false,
+  "biobricks:reviewNotes": "Determined by the annotation agent. The brick README names the upstream source as the JRC TSAR database (https://tsar.jrc.ec.europa.eu/); the repository's own MIT LICENSE covers only the brick tooling, not the data. No TSAR-specific data license statement could be retrieved (the TSAR legal notice is not exposed in fetched page text), so the general European Commission reuse policy was applied: EU-owned content is licensed CC BY 4.0 under Commission Decision 2011/833/EU. Classed attribution / commercial permitted on that basis. HUMAN REVIEW REQUIRED: confirm the TSAR page's specific legal notice, and confirm what data the brick actually packages (README + MIT license only on disk); some TSAR records reference third-party test-method submissions whose rights may differ.",
+  "prov:wasDerivedFrom": [
+    {
+      "@type": "dcat:Dataset",
+      "@id": "https://tsar.jrc.ec.europa.eu/",
+      "dcterms:title": "TSAR - Tracking System for Alternative methods towards Regulatory acceptance (JRC)",
+      "dcterms:license": "https://creativecommons.org/licenses/by/4.0/",
+      "dcterms:publisher": "European Commission, Joint Research Centre (JRC)",
+      "dcat:landingPage": "https://tsar.jrc.ec.europa.eu/"
+    }
+  ],
+  "prov:wasGeneratedBy": {
+    "@type": "prov:Activity",
+    "prov:wasAssociatedWith": "BioBricks licensing-provenance annotation agent (Claude, slice items[1590:1596])",
+    "prov:endedAtTime": {
+      "@type": "xsd:dateTime",
+      "@value": "2026-08-05T00:00:00Z"
+    }
+  }
+}
